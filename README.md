@@ -1,6 +1,6 @@
 # Key Tempo Behavior
 
-This is a version of [Key Repest](https://zmk.dev/docs/behaviors/key-repeat) with on-the-fly recording feature for ZMK with at least Zephyr 3.5.
+This is a version of [Key Repeat](https://zmk.dev/docs/behaviors/key-repeat) with on-the-fly recording feature for ZMK with at least Zephyr 3.5.
 
 ## What it does
 
@@ -34,7 +34,7 @@ manifest:
     path: config
 ```
 
-Now, update your `shield.keymap` adding the behaviors. You can check the `usage-pages` on [Key Repest](https://zmk.dev/docs/behaviors/key-repeat) doc page.
+Now, update your `shield.keymap` adding the behaviors. You can check the `usage-pages` on [Key Repeat](https://zmk.dev/docs/behaviors/key-repeat) doc page.
 
 ```keymap
 / {
