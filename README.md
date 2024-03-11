@@ -4,10 +4,16 @@ This is a version of [Key Repeat](https://zmk.dev/docs/behaviors/key-repeat) wit
 
 ## What it does
 
-This behavior requires a double tap to record the duration of key press/reelase states in runtime. And then, it raises last capture keycode repeatly, until the thrid tap to stop.
+This behavior requires a double tap to record the duration of key press/release states in runtime. And then, it raises last capture keycode repeatly, until the third tap to stop.
 
 In other words, the mechanism is similar to tap the tempo on synthesizer.
 Record the tempo, playback, then stop.
+
+## How to record
+- 1st Press (Start recording `tap-hold` duration)
+- 1st Release (Rec `tap-hold` duration and start recording `delay` duration))
+- 2nd Press (Rec `delay` duration and start playback `tap-hold` and `delay` combo)
+- 3rd Press (Stop loop playback)
 
 ## Installation
 
