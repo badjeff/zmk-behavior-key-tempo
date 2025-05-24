@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2025 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+#if ZMK_BEHAVIOR_OMIT(KEY_REPEAT)
+        /omit-if-no-ref/
+#endif
+        tempo: key_tempo {
+            compatible = "zmk,behavior-key-tempo";
+            #binding-cells = <0>;
+            usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+            display-name = "Key Tempo";
+        };
+
+    };
+};

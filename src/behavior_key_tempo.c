@@ -148,6 +148,9 @@ static int on_key_tempo_binding_released(struct zmk_behavior_binding *binding,
 static const struct behavior_driver_api behavior_key_tempo_driver_api = {
     .binding_pressed = on_key_tempo_binding_pressed,
     .binding_released = on_key_tempo_binding_released,
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
+    .get_parameter_metadata = zmk_behavior_get_empty_param_metadata,
+#endif // IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
 };
 
 static const struct device *devs[DT_NUM_INST_STATUS_OKAY(DT_DRV_COMPAT)];

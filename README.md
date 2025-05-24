@@ -43,16 +43,8 @@ manifest:
 Now, update your `shield.keymap` adding the behaviors. You can check the `usage-pages` on [Key Repeat](https://zmk.dev/docs/behaviors/key-repeat) doc page.
 
 ```keymap
+#include <behaviors/tempo.dtsi>
 / {
-        behaviors {
-                 tempo: key_tempo {
-                        compatible = "zmk,behavior-key-tempo";
-                        #binding-cells = <0>;
-                        // usage-pages = <HID_USAGE_KEY>;
-                        usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
-                };
-        };
-
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
